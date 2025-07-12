@@ -497,23 +497,204 @@ class AIComprehemsiveDemo:
         print("   • 关注最新技术发展")
 
 
+def demonstrate_advanced_projects():
+    """演示高级AI应用项目"""
+    print("\n" + "="*60)
+    print("高级AI应用项目演示")
+    print("="*60)
+    print("展示整合多种AI技术的综合应用系统")
+    
+    try:
+        # 智能游戏AI演示
+        print("\n1. 智能游戏AI - 井字棋对战")
+        print("-" * 40)
+        
+        import sys
+        sys.path.append('project-examples/advanced-ai-applications')
+        
+        from intelligent_game_ai import TicTacToeState, AlphaBetaAgent
+        
+        # 创建简单的随机代理类
+        class SimpleRandomAgent:
+            def __init__(self, name):
+                self.name = name
+            
+            def get_action(self, state, player):
+                import random
+                legal_actions = state.get_legal_actions(player)
+                return random.choice(legal_actions) if legal_actions else None
+        
+        # 简单的AI对战演示
+        game_state = TicTacToeState()
+        ai_agent = AlphaBetaAgent(depth=4)
+        random_agent = SimpleRandomAgent("random")
+        
+        print("初始棋盘:")
+        print(game_state)
+        
+        # AI vs 随机对手的简单演示
+        moves = 0
+        while not game_state.is_terminal() and moves < 5:
+            current_player = game_state.get_current_player()
+            
+            if current_player == 1:
+                action = ai_agent.get_action(game_state, 1)
+                print(f"\nAI (X) 选择位置: {action}")
+            else:
+                action = random_agent.get_action(game_state, 2)
+                print(f"\n随机代理 (O) 选择位置: {action}")
+            
+            if action:
+                game_state = game_state.make_move(action, current_player)
+                print(game_state)
+            moves += 1
+        
+        winner = game_state.get_winner()
+        if winner:
+            player_name = "AI (X)" if winner == 1 else "随机代理 (O)"
+            print(f"\n游戏结束！获胜者: {player_name}")
+        elif game_state.is_terminal():
+            print(f"\n游戏结束！平局")
+        
+        print("\n🎮 智能游戏AI技术：极小极大、Alpha-Beta剪枝、MCTS、强化学习")
+        
+    except Exception as e:
+        print(f"❌ 游戏AI模块演示失败: {e}")
+    
+    try:
+        # 智能聊天机器人演示
+        print("\n2. 智能聊天机器人 - 对话展示")
+        print("-" * 40)
+        
+        from intelligent_chatbot import Chatbot
+        
+        chatbot = Chatbot()
+        
+        # 测试对话
+        test_conversations = [
+            "你好！",
+            "爱因斯坦是谁？",
+            "今天几点了？",
+            "推荐一些pizza",
+            "再见"
+        ]
+        
+        for user_msg in test_conversations:
+            response = chatbot.chat(user_msg)
+            print(f"👤 用户: {user_msg}")
+            print(f"🤖 机器人: {response}")
+            print()
+        
+        print("🗣️ 聊天机器人技术：NLP、知识表示、对话管理、情感分析")
+        
+    except Exception as e:
+        print(f"❌ 聊天机器人模块演示失败: {e}")
+    
+    try:
+        # 智能决策系统演示
+        print("\n3. 智能决策系统 - 投资建议")
+        print("-" * 40)
+        
+        from intelligent_decision_system import SmartInvestmentAdvisor
+        
+        advisor = SmartInvestmentAdvisor()
+        
+        # 模拟不同类型用户
+        user_profiles = [
+            {'name': '年轻投资者', 'age': 25, 'income_stability': 4, 'investment_experience': 2, 'investment_horizon': 15},
+            {'name': '临近退休者', 'age': 58, 'income_stability': 3, 'investment_experience': 4, 'investment_horizon': 5}
+        ]
+        
+        for profile in user_profiles:
+            print(f"\n📊 {profile['name']}投资建议:")
+            
+            risk_tolerance = advisor.assess_risk_tolerance(profile)
+            advisor.risk_tolerance = risk_tolerance
+            
+            recommendation = advisor.generate_portfolio_recommendation(100000)
+            
+            print(f"  风险承受能力: {risk_tolerance:.2f}")
+            print(f"  推荐风险等级: {recommendation['risk_level']}")
+            print(f"  预期年收益率: {recommendation['expected_annual_return']:.1%}")
+            print("  推荐资产配置:")
+            for asset, ratio in recommendation['allocation'].items():
+                amount = 100000 * ratio
+                print(f"    {asset}: {ratio:.1%} (¥{amount:,.0f})")
+        
+        print("\n💡 决策系统技术：多准则决策、风险评估、贝叶斯网络、投资组合优化")
+        
+    except Exception as e:
+        print(f"❌ 决策系统模块演示失败: {e}")
+    
+    print("\n" + "="*60)
+    print("高级AI应用项目总结")
+    print("="*60)
+    print("✅ 智能游戏AI: 集成搜索算法、博弈论、机器学习")
+    print("✅ 智能聊天机器人: 自然语言处理、知识表示、对话管理")
+    print("✅ 智能决策系统: 概率推理、多目标优化、风险管理")
+    print("🎯 这些项目展示了如何将多种AI技术整合构建实用系统")
+
+
 def main():
-    """主函数"""
-    print("🚀 启动AI综合演示系统...")
+    """主函数：运行完整的AI演示"""
+    print("人工智能综合演示系统")
+    print("基于《Artificial Intelligence: A Modern Approach》教材")
+    print("包含28个章节的核心AI算法和3个高级应用项目")
+    print("="*80)
     
-    demo = AIComprehemsiveDemo()
-    
-    # 运行综合演示
-    demo.run_comprehensive_demo()
-    
-    # 展示学习路径
-    demo.show_learning_path()
-    
-    print("\n🎯 演示完成！")
-    print("📖 查看各章节的详细实现代码以深入了解算法细节")
-    print("🔬 尝试修改参数和数据来进行实验")
-    print("🌟 将这些算法应用到您感兴趣的问题中")
+    while True:
+        print("\n请选择演示模块:")
+        print("1. 智能代理基础")
+        print("2. 搜索与问题求解")
+        print("3. 机器学习算法")
+        print("4. 概率推理与决策")
+        print("5. 自然语言处理")
+        print("6. 计算机视觉")
+        print("7. 高级AI应用项目")
+        print("8. 运行所有演示")
+        print("0. 退出")
+        
+        choice = input("\n请输入选择 (0-8): ").strip()
+        
+        if choice == '0':
+            print("感谢使用人工智能演示系统！")
+            break
+        elif choice == '1':
+            # This part of the new_code was not provided in the edit_specification,
+            # so it's commented out to avoid introducing unrelated changes.
+            # demo.demo_intelligent_agents() 
+            print("智能代理基础演示模块未实现")
+        elif choice == '2':
+            demo.demo_search_algorithms()
+        elif choice == '3':
+            demo.demo_machine_learning()
+        elif choice == '4':
+            demo.demo_probabilistic_reasoning()
+        elif choice == '5':
+            demo.demo_natural_language_processing()
+        elif choice == '6':
+            demo.demo_computer_vision()
+        elif choice == '7':
+            demonstrate_advanced_projects()
+        elif choice == '8':
+            print("运行完整演示...")
+            demo.demo_search_algorithms()
+            demo.demo_machine_learning()
+            demo.demo_probabilistic_reasoning()
+            demo.demo_natural_language_processing()
+            demo.demo_computer_vision()
+            demonstrate_advanced_projects()
+            
+            print("\n" + "="*80)
+            print("完整演示结束！")
+            print("本系统展示了现代人工智能的核心技术和应用")
+            print("包括：搜索算法、机器学习、概率推理、自然语言处理、")
+            print("      计算机视觉、智能代理、以及综合AI应用系统")
+            print("="*80)
+        else:
+            print("无效选择，请重新输入")
 
 
 if __name__ == "__main__":
+    demo = AIComprehemsiveDemo() # Initialize the class
     main() 

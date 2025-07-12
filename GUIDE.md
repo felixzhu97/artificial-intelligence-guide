@@ -270,6 +270,116 @@ for params in experiments:
     run_experiment(params)
 ```
 
+## 🚀 新增高级 AI 应用项目
+
+本项目新增了三个综合性的高级 AI 应用案例，展示如何将多种 AI 技术整合构建实用系统：
+
+### 1. 智能游戏 AI (project-examples/advanced-ai-applications/intelligent_game_ai.py)
+
+**功能特色：**
+
+- 多种搜索算法：极小极大、Alpha-Beta 剪枝、蒙特卡洛树搜索(MCTS)
+- 多种游戏支持：井字棋、四子棋
+- AI 对战锦标赛系统
+- 实时性能比较
+- 强化学习 Q-learning 智能体
+
+**运行示例：**
+
+```bash
+python3 project-examples/advanced-ai-applications/intelligent_game_ai.py
+```
+
+**技术亮点：**
+
+- 集成了第 5 章对抗性搜索的核心算法
+- 实现了完整的博弈 AI 框架
+- 包含人机对战交互模式
+
+### 2. 智能聊天机器人 (project-examples/advanced-ai-applications/intelligent_chatbot.py)
+
+**功能特色：**
+
+- 自然语言理解(NLU)：意图识别、实体提取
+- 知识库管理：结构化知识存储和推理
+- 对话状态管理：上下文跟踪、多轮对话
+- 情感分析：文本情感检测
+- 个性化回复：多种聊天风格
+
+**运行示例：**
+
+```bash
+python3 project-examples/advanced-ai-applications/intelligent_chatbot.py
+```
+
+**技术亮点：**
+
+- 整合了第 23 章自然语言处理技术
+- 实现了知识表示与推理
+- 支持中英文混合对话
+
+### 3. 智能决策系统 (project-examples/advanced-ai-applications/intelligent_decision_system.py)
+
+**功能特色：**
+
+- 多准则决策分析(MCDM)
+- 风险评估与管理
+- 投资组合优化
+- 蒙特卡洛风险模拟
+- 商业决策支持
+- 敏感性分析
+
+**运行示例：**
+
+```bash
+python3 project-examples/advanced-ai-applications/intelligent_decision_system.py
+```
+
+**技术亮点：**
+
+- 集成了概率推理与决策理论
+- 实现了完整的智能投资顾问系统
+- 包含风险建模和投资组合优化
+
+## 🎯 综合演示系统
+
+更新的综合演示系统现在包含所有新功能：
+
+```bash
+python3 demo_comprehensive.py
+```
+
+选择选项 7 即可体验所有高级 AI 应用项目的集成演示。
+
+## 📊 项目完成度
+
+### ✅ 已完成章节
+
+- **第 2 章**：问题求解的搜索 (新增)
+- **第 4 章**：复杂环境 (新增)
+- **第 11 章**：自动规划 (新增)
+- **第 14 章**：时序推理 (新增)
+- **第 3 章**：搜索算法
+- **第 5 章**：对抗性搜索
+- **第 21 章**：深度学习
+- **第 23 章**：自然语言处理
+- **第 25 章**：计算机视觉
+
+### 🆕 高级应用项目
+
+- **智能游戏 AI**：多算法博弈系统
+- **智能聊天机器人**：综合对话系统
+- **智能决策系统**：投资决策支持
+
+### 📈 技术覆盖范围
+
+- **搜索与推理**：BFS、DFS、A\*、极小极大、Alpha-Beta、MCTS
+- **机器学习**：决策树、神经网络、强化学习
+- **概率推理**：贝叶斯网络、HMM、卡尔曼滤波、粒子滤波
+- **自动规划**：STRIPS、GraphPlan、部分排序规划
+- **时序推理**：前向-后向算法、维特比算法
+- **应用系统**：游戏 AI、聊天机器人、决策支持
+
 ## 🐛 故障排除
 
 ### 常见问题

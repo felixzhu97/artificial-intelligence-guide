@@ -20,6 +20,14 @@
 
 ### Part II: 问题求解
 
+- **02-problem-solving/** - 问题求解的搜索
+
+  - 状态空间搜索
+  - 问题定义框架
+  - 8 数码问题
+  - N 皇后问题
+  - 罗马尼亚地图问题
+
 - **03-search-algorithms/** - 搜索算法
 
   - 广度优先搜索 (BFS)
@@ -30,10 +38,11 @@
 
 - **04-complex-environments/** - 复杂环境搜索
 
-  - 爬山算法
-  - 模拟退火
-  - 遗传算法
-  - 在线搜索
+  - 部分可观察环境
+  - 随机环境
+  - 多代理环境
+  - 吸尘器世界
+  - Wumpus 世界
 
 - **05-adversarial-search/** - 对抗性搜索
 
@@ -75,9 +84,11 @@
   - 描述逻辑
 
 - **11-automated-planning/** - 自动规划
-  - 经典规划
-  - 规划图
-  - 分层规划
+  - STRIPS 规划框架
+  - 前向和后向搜索规划
+  - GraphPlan 算法
+  - 部分排序规划
+  - 积木世界问题
 
 ### Part IV: 不确定知识和推理
 
@@ -95,9 +106,13 @@
 
 - **14-temporal-reasoning/** - 时序推理
 
-  - 隐马尔可夫模型
+  - 隐马尔可夫模型 (HMM)
+  - 前向-后向算法
+  - 维特比算法
   - 卡尔曼滤波
+  - 粒子滤波
   - 动态贝叶斯网络
+  - Baum-Welch 学习
 
 - **15-probabilistic-programming/** - 概率程序设计
   - 概率编程语言
@@ -189,9 +204,11 @@
   - 测试数据
 
 - **project-examples/** - 项目案例
-  - 智能推荐系统
-  - 综合 AI 应用
-  - 实战项目
+  - 智能推荐系统 (协同过滤、内容推荐)
+  - **advanced-ai-applications/** - 高级 AI 应用
+    - 智能游戏 AI (井字棋、四子棋、极小极大、MCTS)
+    - 智能聊天机器人 (NLP、对话管理、情感分析)
+    - 智能决策系统 (投资建议、风险评估、多准则决策)
 
 ## 🚀 快速开始
 
@@ -213,9 +230,17 @@ pip install -r requirements.txt
 python demo_comprehensive.py
 
 # 运行特定章节演示
+python 02-problem-solving/implementations/problem_solving.py
 python 03-search-algorithms/implementations/search_algorithms.py
 python 05-adversarial-search/implementations/adversarial_search.py
+python 11-automated-planning/implementations/automated_planning.py
+python 14-temporal-reasoning/implementations/temporal_reasoning.py
 python 21-deep-learning/implementations/neural_network.py
+
+# 运行高级AI应用项目
+python project-examples/advanced-ai-applications/intelligent_game_ai.py
+python project-examples/advanced-ai-applications/intelligent_chatbot.py
+python project-examples/advanced-ai-applications/intelligent_decision_system.py
 ```
 
 ### 3. 探索算法
