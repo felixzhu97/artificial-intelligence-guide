@@ -6,11 +6,11 @@
 
 - **完整性**：涵盖教科书 28 章的主要算法
 - **实用性**：可运行的代码示例和详细注释
-- **教育性**：适合学习和教学使用
+- **教育性**：适合学习和教学使用，每章节都有独立 README
 - **模块化**：每个章节独立实现，便于理解和扩展
 - **可视化**：包含算法过程的可视化展示
-- **交互性**：Web 界面支持实时参数调整
-- **智能化**：集成多种高级 AI 应用项目
+- **文档化**：完整的项目文档和使用指南
+- **结构化**：清晰的项目结构和代码组织
 
 ## 📚 章节目录
 
@@ -206,11 +206,18 @@
   - 测试数据
 
 - **project-examples/** - 项目案例
+
   - 智能推荐系统 (协同过滤、内容推荐)
   - **advanced-ai-applications/** - 高级 AI 应用
     - 智能游戏 AI (井字棋、四子棋、极小极大、MCTS)
     - 智能聊天机器人 (NLP、对话管理、情感分析)
     - 智能决策系统 (投资建议、风险评估、多准则决策)
+
+- **docs/** - 项目文档
+  - 章节完成状态
+  - 实现总结
+  - 使用指南
+  - 项目报告
 
 ## 🚀 快速开始
 
@@ -228,15 +235,14 @@ pip install -r requirements.txt
 ### 2. 运行演示
 
 ```bash
-# 运行综合演示
-python demo_comprehensive.py
-
 # 运行特定章节演示
+python 01-intelligent-agents/implementations/simple_agent.py
 python 02-problem-solving/implementations/problem_solving.py
 python 03-search-algorithms/implementations/search_algorithms.py
 python 05-adversarial-search/implementations/adversarial_search.py
 python 11-automated-planning/implementations/automated_planning.py
 python 14-temporal-reasoning/implementations/temporal_reasoning.py
+python 17-complex-decisions/implementations/complex_decisions.py
 python 21-deep-learning/implementations/neural_network.py
 
 # 运行高级AI应用项目
